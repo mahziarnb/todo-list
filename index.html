@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 </head>
 <body>
-    
-    <!-- main -->
-    <section class="main">
 
-        <div class="main-container">
+    <!-- main -->
+    <section class="main ">
+
+        <div class="main-container flex">
 
             <!-- left section -->
-            <section class="left">
+            <section class="left w-1/2">
 
-                <h1>ToDo App</h1>
+                <h1 class="font-bold text-[3rem]">ToDo App</h1>
 
-                <p>lets accomplish tasks together !</p>
+                <p class="font-bold text-xl">lets accomplish tasks together !</p>
 
                 <div class="image">
                     <img src="assets/image/Owl.svg" alt="owl image">
@@ -29,20 +29,32 @@
             </section>
 
             <!-- right section -->
-            <section class="right">
+            <section class="right w-1/2   bg-amber-400 p-6">
 
-                <h1>get things done !</h1>
+                <h1 class="text-3xl text-light mb-4">get things done !</h1>
 
                 <!-- add task -->
-                <div class="add-task">
-                    <input type="text" placeholder="what is the task today?">
-                    <button type="button">Add Task</button>
+                <div class="add-task felx">
+                    <input type="text" placeholder="what is the task today?" class="bg-green-300 border px-3 py-1 grow">
+                    <button type="button" class="bg-red-300 border px-3 py-1 text-light hover:bg-red-200 hover:cursor-pointer">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
                 <div class="tasks">
 
-                    <div class="task-container">
+                    <div class="task-container flex items-center justify-between mb-2 bg-green-300 p-3 text-light rounded-lg">
+
+                        <!-- task body-->
+                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+
+                        <div class="icons">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="task-container flex items-center justify-between bg-green-300 p-3 text-light">
 
                         <!-- task body-->
                         <p class="tesk">Lorem ipsum dolor sit amet.</p>
