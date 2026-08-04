@@ -41,17 +41,17 @@
 
                 <!-- add task -->
                 <div class="add-task flex mt-6 mb-[3rem]">
-                    <input type="text" placeholder="what is the task today?" class="bg-transparent placeholder-tint/20   border border-r-0 text-tint border-tint pl-4 py-1 grow outline-none">
-                    <button type="button" class="bg-tint border border-l-0 border-tint text-xs px-2 text-nowrap font-bold py-1 text-light transition duration-150 ease-in-out hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
+                    <input id="add-task-input" type="text" placeholder="what is the task today?" class="bg-transparent placeholder-tint/20   border border-r-0 text-tint border-tint pl-4 py-1 grow outline-none">
+                    <button id="add-task" type="button" class="bg-tint border border-l-0 border-tint text-xs px-2 text-nowrap font-bold py-1 text-light transition duration-150 ease-in-out hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
-                <div class="tasks flex flex-col gap-4">
+                <div id="tasks-div" class="tasks flex flex-col gap-4">
 
                     <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
+                        <p id="task" class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
