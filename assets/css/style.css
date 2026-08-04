@@ -1,0 +1,7 @@
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}

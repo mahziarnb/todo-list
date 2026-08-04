@@ -7,102 +7,108 @@
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
 </head>
-<body>
-
+<body class=" bg-tint ">
     <!-- main -->
-    <section class="main ">
+    <section class="main h-screen w-full ">
         <!-- main container -->
-        <div class="main-container flex">
+        <div class="main-container h-full w-full flex flex-center ">
+
 
             <!-- left section -->
-            <section class="left w-1/2">
+            <section class="left w-1/3 flex flex-col pb-7">
 
-                <h1 class="font-bold text-[3rem]">ToDo App</h1>
+                <h1 class="font-black text-6xl text-shade">ToDo App</h1>
 
-                <p class="font-bold text-xl">lets accomplish tasks together !</p>
+                <p class="text-2xl text-light py-5">Lets Accomplish Tasks Together!</p>
 
-                <div class="image">
-                    <img src="assets/image/Owl.svg" alt="owl image">
+                <div class="image w-full">
+                    <div class="size-[23rem] ">
+                        <img src="assets/image/Owl.svg" class="w-full h-full" alt="owl image">
+                    </div>
                 </div>
 
             </section>
 
             <!-- right section -->
-            <section class="right w-1/2  bg-shade p-6 ">
+            <section class="right w-1/3  bg-shade px-7 py-8 rounded-xl">
 
-                <h1 class="text-3xl text-center text-light">get things done !</h1>
+                <h1 class="text-2xl text-center text-light font-bold">Get Things Done !</h1>
 
                 <!-- add task -->
-                <div class="add-task flex mt-5 mb-10">
-                    <input type="text" placeholder="what is the task today?" class="bg-transparent border border-tint px-3 py-1 grow outline-none">
-                    <button type="button" class="bg-tint border px-3 py-1 text-light hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
+                <div class="add-task flex mt-6 mb-[3rem]">
+                    <input type="text" placeholder="what is the task today?" class="bg-transparent placeholder-tint/20   border border-r-0 text-tint border-tint pl-4 py-1 grow outline-none">
+                    <button type="button" class="bg-tint border border-l-0 border-tint text-xs px-2 text-nowrap font-bold py-1 text-light transition duration-150 ease-in-out hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
-                <div class="tasks">
+                <div class="tasks flex flex-col gap-4">
 
-                    <div class="task-container flex items-center justify-between mb-2 bg-tint p-3 text-light rounded-lg">
+                    <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
-                            <button class="cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </div>
 
-                    <div class="task-container flex items-center justify-between mb-2 bg-tint p-3 text-light rounded-lg">
+                    <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
-                            <button class="cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </div>
 
-                    <div class="task-container flex items-center justify-between mb-2 bg-tint p-3 text-light rounded-lg">
+                    <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
-                            <button class="cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </div>
 
-                    <div class="task-container flex items-center justify-between mb-2 bg-tint p-3 text-light rounded-lg">
+                    <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
-                            <button class="cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </div>
 
-                    <div class="task-container flex items-center justify-between mb-2 bg-tint p-3 text-light rounded-lg">
+                    <div class="task-container flex items-center justify-between bg-tint py-[.7rem] px-4 text-light rounded-md">
 
                         <!-- task body-->
-                        <p class="tesk">Lorem ipsum dolor sit amet.</p>
+                        <p class="task text-[.93rem] font-medium">Lorem ipsum dolor sit amet.</p>
 
                         <!-- buttons -->
                         <div class="buttons">
-                            <button class="cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="cursor-pointer hover:text-shade/80 transition duration-150 ease-in-out"><i class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </div>
