@@ -22,6 +22,8 @@
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-tint: #91AC87;
+    --color-shade: #133A1B;
     --color-light: #FFFFFF;
   }
 }
@@ -192,6 +194,18 @@
       max-width: 96rem;
     }
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -200,6 +214,9 @@
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .flex {
     display: flex;
@@ -224,6 +241,9 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -250,6 +270,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-tint {
+    border-color: var(--color-tint);
+  }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
   }
@@ -258,6 +281,15 @@
   }
   .bg-red-300 {
     background-color: var(--color-red-300);
+  }
+  .bg-shade {
+    background-color: var(--color-shade);
+  }
+  .bg-tint {
+    background-color: var(--color-tint);
+  }
+  .bg-transparent {
+    background-color: transparent;
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -305,6 +337,10 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
   @media (hover: hover) {
     .hover\:cursor-pointer:hover {
       cursor: pointer;
@@ -314,6 +350,17 @@
     }
     .hover\:bg-red-200:hover {
       background-color: var(--color-red-200);
+    }
+    .hover\:bg-tint:hover {
+      background-color: var(--color-tint);
+    }
+    .hover\:bg-tint\/50:hover {
+      background-color: color-mix(in srgb, #91AC87 50%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-tint\/50:hover {
+        background-color: color-mix(in oklab, var(--color-tint) 50%, transparent);
+      }
     }
   }
 }
