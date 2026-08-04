@@ -4,12 +4,14 @@ let tasks = []
 
 const addTask = document.getElementById('add-task')
 
-// add task process
+// add task process start
 addTask.addEventListener('click' , () => {
     let taskText = document.getElementById('add-task-input').value
     tasks.push(taskText)
     console.log(tasks)
     addTaskFunc(taskText)
+    // add listener for new trashBtn
+    createRemoveListener()
 })
 console.log(tasks)
 
@@ -36,7 +38,7 @@ function addTaskFunc(taskText) {
     editIcon.classList.add('fa-solid','fa-pen-to-square')
     // trash button
     const trashBtn = document.createElement('button')
-    trashBtn.classList.add('cursor-pointer','hover:text-shade/80','transition','duration-150','ease-in-out')
+    trashBtn.classList.add('trashButton','cursor-pointer','hover:text-shade/80','transition','duration-150','ease-in-out')
     // trash icon
     const trashIcon = document.createElement('i')
     trashIcon.classList.add('fa-solid','fa-trash')
@@ -63,4 +65,25 @@ function addTaskFunc(taskText) {
     // add text in p tag and add task in html
         task.textContent = tasks[tasks.length - 1]
         tasksDiv.append(taskContainer)
+
+    // add trashBtn in trashButtons array
+        trashButtons.push(trashBtn)
+
 }
+// add task process end
+
+// remove task process start
+const trashButtons = [...document.querySelectorAll('.trashButton')]
+
+function createRemoveListener() {
+
+    trashButtons.forEach((item) => {
+
+        item.addEventListener('click' , () => {
+
+            item.parentElement.parentElement.remove()
+
+        })
+    })
+}
+// remove task process end
