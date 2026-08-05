@@ -8,12 +8,12 @@ const addTask = document.getElementById('add-task')
 addTask.addEventListener('click' , () => {
     let taskText = document.getElementById('add-task-input').value
     tasks.push(taskText)
-    console.log(tasks)
+    console.log(`tasks : ${tasks}`)
     addTaskFunc(taskText)
     // add listener for new trashBtn
     createRemoveListener()
+    createEditListener()
 })
-console.log(tasks)
 
 function addTaskFunc(taskText) {
 
@@ -32,7 +32,7 @@ function addTaskFunc(taskText) {
     buttons.classList.add('buttons')
     // edit button
     const editBtn = document.createElement('button')
-    editBtn.classList.add('cursor-pointer','hover:text-shade/80','transition','duration-150','ease-in-out')
+    editBtn.classList.add('editButton','cursor-pointer','hover:text-shade/80','transition','duration-150','ease-in-out')
     // edit icon
     const editIcon = document.createElement('i')
     editIcon.classList.add('fa-solid','fa-pen-to-square')
@@ -63,7 +63,8 @@ function addTaskFunc(taskText) {
     //-----------create task end---------
 
     // add text in p tag and add task in html
-        task.textContent = tasks[tasks.length - 1]
+        // task.textContent = tasks[tasks.length - 1]
+        task.textContent = taskText
         tasksDiv.append(taskContainer)
 
     // add trashBtn in trashButtons array
@@ -87,3 +88,17 @@ function createRemoveListener() {
     })
 }
 // remove task process end
+
+// edit task process start
+
+function createEditListener() {
+    let editButtons = [...document.querySelectorAll('.editButton')]
+    editButtons.forEach(item => {
+        item.addEventListener('click' , () => {
+        let index = editButtons.indexOf(item)
+        let newTask = prompt(`text : ${tasks[index]}`)
+        item.parentElement.parentElement.remove()
+        addTaskFunc(newTask)
+    })
+})
+}
