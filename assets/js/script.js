@@ -69,6 +69,7 @@ addBtn.addEventListener('click' , () => {
     addInput.value = ''
     addInput.focus()
     editBtnFunc()
+    removeBtnFunc()
 })
 
 // access key
@@ -163,3 +164,14 @@ function cancelBtnFunc(oldTaskText) {
 }
 
 // -- edit process end --
+
+// -- remove process start --
+function removeBtnFunc() {
+    let removeBtns = [...document.querySelectorAll('.removeBtn')]
+    removeBtns.forEach(removeBtn => {
+        removeBtn.addEventListener('click' , () => {
+            removeBtn.parentElement.parentElement.remove()
+        })
+    })
+}
+// -- remove process end --
