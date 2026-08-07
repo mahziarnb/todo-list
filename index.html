@@ -42,11 +42,21 @@
                 <!-- add task -->
                 <div class="add-task flex mt-6 mb-[3rem]">
                     <input id="add-task-input" type="text" placeholder="what is the task today?" class="bg-transparent placeholder-tint/20   border border-r-0 text-tint border-tint pl-4 py-1 grow outline-none">
-                    <button id="add-task" type="button" class="bg-tint border border-l-0 border-tint text-xs px-2 text-nowrap font-bold py-1 text-light transition duration-150 ease-in-out hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
+                    <button id="addBtn" type="button" class="bg-tint border border-l-0 border-tint text-xs px-2 text-nowrap font-bold py-1 text-light transition duration-150 ease-in-out hover:bg-tint/50 hover:cursor-pointer">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
-                <ul id="tasks" class="tasks flex flex-col gap-4">
+                <ul id="tasks-list" class="tasks flex flex-col gap-4">
+                    <li class="tasks-item">
+
+                        <input type="text" class="item-input">
+
+                        <div class="btn-group">
+                            <button class="editBtn btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="removeBtn btn"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+
+                    </li>
                     <li class="tasks-item">
 
                         <input type="text" class="item-input">
