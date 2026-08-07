@@ -2,6 +2,32 @@
     justify-content: center;
     align-items: center;
 }
+
 body{
     font-family: "Poppins", sans-serif;
+}
+
+.btn{
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover{
+    color: #133a1b91;
+}
+
+.tasks-item{
+    display: flex;
+    background-color: #91AC87;
+    align-items: center;
+    border-radius: 10px;
+}
+.item-input{
+    flex-grow: 1;
+    padding: 7px 5px;
+}
+.item-input:focus{
+    background-color: #133a1b91;
+    color: white;
+    outline: none;
 }
