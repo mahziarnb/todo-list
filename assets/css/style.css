@@ -10,10 +10,7 @@ body{
 .btn{
     cursor: pointer;
     color: white;
-}
-
-.btn:hover{
-    color: #133a1b91;
+    transition: color .15s ease ;
 }
 
 .tasks-item{
@@ -25,7 +22,8 @@ body{
 
 .item-input{
     flex-grow: 1;
-    padding: 7px 5px;
+    padding: 10px 5px 10px 20px;
+    color: white;
 }
 
 .item-input:focus{
@@ -40,4 +38,31 @@ body{
 
 .show{
     display: show;
+}
+
+.btn-group{
+    display: flex;
+    gap: 0 3px;
+    padding-right: 8px;
+}
+
+.addBtn{
+    transition:color .15s ease , background-color .15s ease ;
+    cursor: pointer;
+    color: white;
+}
+
+.addBtn:hover {
+    background-color: #FFFFFF;
+    color: #133a1b91 ;
+}
+
+.cancelBtn:hover ,
+.removeBtn:hover {
+    color: #b9854e;
+}
+
+.confirmBtn:hover ,
+.editBtn:hover{
+    color: #133a1b91;
 }

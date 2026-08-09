@@ -19,11 +19,11 @@ div.classList.add('btn-group')
 li.append(div)
 
 const editBtn = document.createElement('button')
-editBtn.classList.add('editBtn' , 'btn')
+editBtn.classList.add('editBtn' ,'btn','order-3')
 div.append(editBtn)
 
 const removeBtn = document.createElement('button')
-removeBtn.classList.add('removeBtn' , 'btn')
+removeBtn.classList.add('removeBtn','btn','order-4')
 div.append(removeBtn)
 
 const editIcon = document.createElement('i')
@@ -35,7 +35,7 @@ removeIcon.classList.add('fa-solid' , 'fa-trash')
 removeBtn.append(removeIcon)
 // hide buttons
 const cancelBtn = document.createElement('button')
-cancelBtn.classList.add('cancelBtn' , 'btn' , 'hide')
+cancelBtn.classList.add('cancelBtn' , 'btn' , 'hide' , 'order-1')
 div.append(cancelBtn)
 
 const cancelIcon = document.createElement('i')
@@ -43,7 +43,7 @@ cancelIcon.classList.add('fa-solid' , 'fa-xmark')
 cancelBtn.append(cancelIcon)
 
 const confirmBtn = document.createElement('button')
-confirmBtn.classList.add('confirmBtn' , 'btn' , 'hide')
+confirmBtn.classList.add('confirmBtn' , 'btn' , 'hide','order-2')
 div.append(confirmBtn)
 
 const confirmIcon = document.createElement('i')
