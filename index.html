@@ -11,19 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-tint">
+<body class="bg-tint flex flex-center">
     <!-- main -->
-    <section class="main h-screen w-full ">
+    <section class="main lg:h-screen w-full max-w-[1200px] ">
         <!-- main container -->
-        <div class="main-container h-full w-full flex flex-center ">
+        <div class="main-container  w-full flex flex-col md:flex-row md:gap-5 flex-center py-5 overflow-hidden px-5">
 
 
             <!-- left section -->
-            <section class="left w-1/3 flex flex-col pb-7">
+            <section class="left flex justify-center flex-col pb-7">
 
-                <h1 class="font-black text-6xl text-shade tracking-wide">ToDo List</h1>
+                <h1 class="font-black text-6xl text-shade tracking-wide text-center md:text-left">ToDo List</h1>
 
-                <p class="text-2xl text-light py-5 ">Lets Accomplish Tasks Together!</p>
+                <p class="text-2xl text-light py-5 text-center md:text-left ">Lets Accomplish Tasks Together!</p>
 
                 <div class="image w-full">
                     <div class="size-[23rem] ">
@@ -34,39 +34,18 @@
             </section>
 
             <!-- right section -->
-            <section class="right w-1/3 h-[480px] bg-shade px-7 py-8 rounded-xl">
+            <section class="right w-full lg:w-[40%]  h-[480px] bg-shade px-7 py-8 rounded-xl">
 
                 <h1 class="text-2xl text-center text-light font-bold">Get Things Done !</h1>
 
                 <!-- add task -->
                 <div class="add-task flex mt-6 mb-[3rem]">
                     <input id="add-task-input" type="text" placeholder="What is the task today?" class="bg-transparent placeholder-tint/30   border border-r-0 text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
-                    <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
+                    <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-sm md:text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
                 <ul id="tasks-list" class="tasks flex flex-col gap-4 max-h-[290px] overflow-y-auto scrollbar-thin">
-
-                     <!-- <li  class="tasks-item">
-
-                        <input  disabled type="text" class="item-input">
-
-                        <div class="btn-group">
-                            <button class="editBtn btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="removeBtn btn"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-
-                    </li>
-                    <li  class="tasks-item">
-
-                        <input disabled type="text" class="item-input">
-
-                        <div class="btn-group">
-                            <button class="editBtn btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="removeBtn btn"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-
-                    </li> -->
 
                 </ul>
 

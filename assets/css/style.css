@@ -1,10 +1,10 @@
+body{
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 .flex-center{
     justify-content: center;
     align-items: center;
-}
-
-body{
-    font-family: "Roboto Condensed", sans-serif;
 }
 
 .btn{
