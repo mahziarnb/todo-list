@@ -1,4 +1,6 @@
 'use strict'
+
+let tasks = []
 const tasksList = document.getElementById('tasks-list')
 
 function addItemFunc(taskText) {
@@ -6,7 +8,7 @@ function addItemFunc(taskText) {
 // -- create list item start --
 const li = document.createElement('li')
 li.classList.add('tasks-item')
-tasksList.prepend(li)
+tasksList.append(li)
 
 const input = document.createElement('input')
 input.classList.add('item-input')
@@ -54,39 +56,88 @@ confirmBtn.append(confirmIcon)
 
 }
 
+// show old tasks
+document.addEventListener("DOMContentLoaded", () => {
+
+    if(localStorage.getItem('tasks') === null){
+        return
+    }
+
+    let getTasks = JSON.parse(localStorage.getItem('tasks'))
+
+    tasks = getTasks
+
+    console.log(tasks)
+
+    tasks.forEach(taskText => {
+        addItemFunc(taskText)
+    })
+
+    editBtnFunc()
+    removeBtnFunc()
+});
+
 
 // -- add process start --
 const addBtn = document.getElementById('addBtn')
 const addInput = document.getElementById('add-task-input')
 const itemInputs = document.querySelectorAll('.item-input')
 
+
+// push task text in tasks array and save in localStorage
+function updateTasks() {
+
+    tasks.push(addInput.value)
+
+    // update localStorage
+    let stringTasks = JSON.stringify(tasks)
+    localStorage.setItem('tasks' , stringTasks)
+}
+
 addBtn.addEventListener('click' , () => {
+
     if(addInput.value.trim() === '') {
         alert(`the input is empty`)
         return
     }
+
+    updateTasks()
+
     addItemFunc(addInput.value)
+
     addInput.value = ''
+
     addInput.focus()
+
     editBtnFunc()
+
     removeBtnFunc()
 })
 
-// add scroll padding
+
+// add scrollbar padding
 addBtn.addEventListener('click' , () => {
+
     if(tasksList.childElementCount > 5) {
+
         tasksList.classList.add('pr-2')
+
         return;
     }
+
 })
 
 
 
 // access key
 addInput.addEventListener('keydown' , (event) => {
+
     if(event.key === 'Enter'){
+
         addBtn.click()
+
     }
+
 })
 // -- add process end --
 
@@ -144,6 +195,22 @@ function confirmBtnFunc() {
 
             // add disabled to input item
             confirmBtn.parentElement.parentElement.firstElementChild.setAttribute('disabled' , 'disabled')
+
+            // -- update tasks array and localStorage start --
+
+            //get index item
+            const index = Array.from(document.getElementById('tasks-list').children).indexOf(confirmBtn.parentElement.parentElement);
+
+            // change task text
+            tasks.splice(index, 1, confirmBtn.parentElement.parentElement.firstChild.value);
+
+            let stringTasks = JSON.stringify(tasks)
+
+            // update localStorage
+            localStorage.setItem('tasks' , stringTasks)
+
+            // -- update tasks array and localStorage end --
+
         })
     })
 }
@@ -178,9 +245,24 @@ function cancelBtnFunc(oldTaskText) {
 // -- remove process start --
 function removeBtnFunc() {
     let removeBtns = [...document.querySelectorAll('.removeBtn')]
+
     removeBtns.forEach(removeBtn => {
+
         removeBtn.addEventListener('click' , () => {
+
+            // get index
+            const index = Array.from(document.getElementById('tasks-list').children).indexOf(removeBtn.parentElement.parentElement);
+
+            // remove task
             removeBtn.parentElement.parentElement.remove()
+
+            // remove task from tasks array
+            tasks.splice(index , 1)
+
+            // update localStorage
+            let stringTasks = JSON.stringify(tasks)
+            localStorage.setItem('tasks' , stringTasks)
+
         })
     })
 }
