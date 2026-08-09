@@ -254,7 +254,10 @@ function removeBtnFunc() {
             const index = Array.from(document.getElementById('tasks-list').children).indexOf(removeBtn.parentElement.parentElement);
 
             // remove task
-            removeBtn.parentElement.parentElement.remove()
+            document.getElementById('dialog').showModal()
+            document.getElementById('yesModal').addEventListener('click' , () => {
+                removeBtn.parentElement.parentElement.remove()
+            })
 
             // remove task from tasks array
             tasks.splice(index , 1)
