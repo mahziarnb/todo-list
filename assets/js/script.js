@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tasks = getTasks
 
-    console.log(tasks)
-
     tasks.forEach(taskText => {
         addItemFunc(taskText)
     })
