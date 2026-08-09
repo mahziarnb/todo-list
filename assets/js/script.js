@@ -72,6 +72,16 @@ addBtn.addEventListener('click' , () => {
     removeBtnFunc()
 })
 
+// add scroll padding
+addBtn.addEventListener('click' , () => {
+    if(tasksList.childElementCount > 5) {
+        tasksList.classList.add('pr-2')
+        return;
+    }
+})
+
+
+
 // access key
 addInput.addEventListener('keydown' , (event) => {
     if(event.key === 'Enter'){
