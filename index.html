@@ -15,10 +15,10 @@
     <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <el-dialog>
-  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0  size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
     <el-dialog-backdrop class="fixed inset-0 bg-gray-900/50 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
 
-    <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+    <div tabindex="0" class="flex min-h-full items-center justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
       <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
         <div class="bg-shade px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="sm:flex sm:items-start">
@@ -70,13 +70,15 @@
                 <h1 class="text-2xl text-center text-light font-bold">Get Things Done !</h1>
 
                 <!-- add task -->
-                <div class="add-task flex mt-6 mb-[3rem]">
+                <div class="add-task flex mt-6 ">
                     <input id="add-task-input" type="text" placeholder="What is the task today?" class="bg-transparent placeholder-tint/30   border border-r-0 text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
                     <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-sm md:text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
                 </div>
+                <!-- input error -->
+                <p id="input-error" class="hide text-red-600 text-sm mt-1">Please enter content !</p>
 
                 <!-- tasks container -->
-                <ul id="tasks-list" class="tasks flex flex-col gap-4 max-h-[290px] overflow-y-auto scrollbar-thin">
+                <ul id="tasks-list" class="tasks flex flex-col mt-[3rem]  gap-4 max-h-[290px] overflow-y-auto scrollbar-thin">
 
                 </ul>
 

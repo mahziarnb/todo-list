@@ -16,6 +16,12 @@ input.value = taskText
 input.setAttribute('disabled' , 'disabled')
 li.append(input)
 
+const inputError = document.createElement('p')
+inputError.classList.add('hide','text-red-600' , 'text-sm' , 'mt-[-15px]' , 'ml-1')
+inputError.textContent = 'Please enter content !'
+li.after(inputError)
+
+
 const div = document.createElement('div')
 div.classList.add('btn-group')
 li.append(div)
@@ -95,10 +101,13 @@ function updateTasks() {
 }
 
 addBtn.addEventListener('click' , () => {
-
+    let inputErrText = document.getElementById('input-error')
     if(addInput.value.trim() === '') {
-        alert(`the input is empty`)
+        inputErrText.classList.remove('hide')
         return
+    }
+    if(addInput.value.trim() !== '') {
+        inputErrText.classList.add('hide')
     }
 
     updateTasks()
@@ -180,9 +189,13 @@ function confirmBtnFunc() {
 
             // check input value
             if(confirmBtn.parentElement.parentElement.firstElementChild.value.trim() === '') {
-                alert(`the input is empty`)
+                confirmBtn.parentElement.parentElement.nextSibling.classList.remove('hide')
+                confirmBtn.parentElement.parentElement.firstElementChild.focus()
                 return
+            }else{
+                confirmBtn.parentElement.parentElement.nextSibling.classList.add('hide')
             }
+
 
             // add hide class to confirm button
             confirmBtn.classList.replace('show' , 'hide')
