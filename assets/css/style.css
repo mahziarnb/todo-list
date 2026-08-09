@@ -4,7 +4,7 @@
 }
 
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .btn{
@@ -67,3 +67,22 @@ body{
     color: #133a1b91;
 }
 
+/* animation */
+
+.owl {
+    animation: owlFloat 3s ease-in-out infinite;
+}
+
+@keyframes owlFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

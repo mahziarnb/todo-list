@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet"
-/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="bg-tint">
     <!-- main -->
@@ -22,31 +21,31 @@
             <!-- left section -->
             <section class="left w-1/3 flex flex-col pb-7">
 
-                <h1 class="font-black text-6xl text-shade">ToDo App</h1>
+                <h1 class="font-black text-6xl text-shade tracking-wide">ToDo List</h1>
 
-                <p class="text-2xl text-light py-5">Lets Accomplish Tasks Together!</p>
+                <p class="text-2xl text-light py-5 ">Lets Accomplish Tasks Together!</p>
 
                 <div class="image w-full">
                     <div class="size-[23rem] ">
-                        <img src="assets/image/Owl.svg" class="w-full h-full" alt="owl image">
+                        <img src="assets/image/Owl.svg" class="owl w-full h-full" alt="owl image">
                     </div>
                 </div>
 
             </section>
 
             <!-- right section -->
-            <section class="right w-1/3 h-[480px]  bg-shade px-7 py-8 rounded-xl">
+            <section class="right w-1/3 h-[480px] bg-shade px-7 py-8 rounded-xl">
 
                 <h1 class="text-2xl text-center text-light font-bold">Get Things Done !</h1>
 
                 <!-- add task -->
                 <div class="add-task flex mt-6 mb-[3rem]">
-                    <input id="add-task-input" type="text" placeholder="what is the task today?" class="bg-transparent placeholder-tint/20   border border-r-0 text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
-                    <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-[.8rem] px-2 text-nowrap font-bold py-1 text-light">Add Task</button>
+                    <input id="add-task-input" type="text" placeholder="What is the task today?" class="bg-transparent placeholder-tint/30   border border-r-0 text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
+                    <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
                 </div>
 
                 <!-- tasks container -->
-                <ul id="tasks-list" class="tasks flex flex-col gap-4 h-[290px] overflow-y-auto scrollbar-thin pr-2">
+                <ul id="tasks-list" class="tasks flex flex-col gap-4 max-h-[290px] overflow-y-auto scrollbar-thin pr-2">
 
                      <!-- <li  class="tasks-item">
 
