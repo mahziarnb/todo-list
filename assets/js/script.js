@@ -6,7 +6,7 @@ function addItemFunc(taskText) {
 // -- create list item start --
 const li = document.createElement('li')
 li.classList.add('tasks-item')
-tasksList.append(li)
+tasksList.prepend(li)
 
 const input = document.createElement('input')
 input.classList.add('item-input')

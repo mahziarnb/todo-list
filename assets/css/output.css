@@ -225,6 +225,33 @@
     width: 23rem;
     height: 23rem;
   }
+  .h-\[10px\] {
+    height: 10px;
+  }
+  .h-\[50px\] {
+    height: 50px;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
+  .h-\[200px\] {
+    height: 200px;
+  }
+  .h-\[290px\] {
+    height: 290px;
+  }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[400px\] {
+    height: 400px;
+  }
+  .h-\[430px\] {
+    height: 430px;
+  }
+  .h-\[480px\] {
+    height: 480px;
+  }
   .h-full {
     height: 100%;
   }
@@ -252,11 +279,26 @@
   .resize {
     resize: both;
   }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
   .flex-col {
     flex-direction: column;
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .scroll-auto {
+    scroll-behavior: auto;
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -294,11 +336,17 @@
   .py-1 {
     padding-block: var(--spacing);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .pr-1 {
+    padding-right: var(--spacing);
   }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
