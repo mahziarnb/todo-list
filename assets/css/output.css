@@ -747,6 +747,9 @@
     .md\:gap-5 {
       gap: calc(var(--spacing) * 5);
     }
+    .md\:px-7 {
+      padding-inline: calc(var(--spacing) * 7);
+    }
     .md\:text-left {
       text-align: left;
     }
