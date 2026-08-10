@@ -79,7 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     editBtnFunc()
     removeBtnFunc()
+    checkScrollPadding()
+
 });
+
+function checkScrollPadding() {
+
+    if(tasks.length > 5) {
+        tasksList.classList.add('pr-2')
+    }else{
+        tasksList.classList.remove('pr-2')
+    }
+}
 
 
 // -- add process start --
@@ -119,22 +130,10 @@ addBtn.addEventListener('click' , () => {
     editBtnFunc()
 
     removeBtnFunc()
-})
 
-
-// add scrollbar padding
-addBtn.addEventListener('click' , () => {
-
-    if(tasksList.childElementCount > 5) {
-
-        tasksList.classList.add('pr-2')
-
-        return;
-    }
+    checkScrollPadding()
 
 })
-
-
 
 // access key
 addInput.addEventListener('keydown' , (event) => {
@@ -230,9 +229,10 @@ function cancelBtnFunc(oldTaskText) {
 
     const cancelBtns = [...document.querySelectorAll('.cancelBtn')]
 
-    cancelBtns.forEach(cancelBtn => {
+            cancelBtns.forEach(cancelBtn => {
 
-        cancelBtn.addEventListener('click' , () => {
+                cancelBtn.addEventListener('click' , () => {
+
             // add hide class to cancel button
               cancelBtn.classList.replace('show' , 'hide')
 
@@ -254,29 +254,42 @@ function cancelBtnFunc(oldTaskText) {
 // -- edit process end --
 
 // -- remove process start --
+
 function removeBtnFunc() {
-    let removeBtns = [...document.querySelectorAll('.removeBtn')]
+
+    const removeBtns = [...document.querySelectorAll('.removeBtn')]
 
     removeBtns.forEach(removeBtn => {
 
-        removeBtn.addEventListener('click' , () => {
+        removeBtn.addEventListener('click', () => {
 
-            // get index
-            const index = Array.from(document.getElementById('tasks-list').children).indexOf(removeBtn.parentElement.parentElement);
+            const item = removeBtn.closest('.tasks-item')
 
-            // remove task
-            document.getElementById('dialog').showModal()
-            document.getElementById('yesModal').addEventListener('click' , () => {
-                removeBtn.parentElement.parentElement.remove()
-            })
+            const items = [...tasksList.querySelectorAll('.tasks-item')]
+            const index = items.indexOf(item)
 
-            // remove task from tasks array
-            tasks.splice(index , 1)
+            const dialog = document.getElementById('dialog')
+            const yesModal = document.getElementById('yesModal')
 
-            // update localStorage
-            let stringTasks = JSON.stringify(tasks)
-            localStorage.setItem('tasks' , stringTasks)
+            dialog.showModal()
 
+            yesModal.onclick = () => {
+
+                // remove from DOM
+                item.remove()
+
+                // remove from tasks array
+                tasks.splice(index, 1)
+
+                // update localStorage
+                localStorage.setItem('tasks', JSON.stringify(tasks))
+
+                // update scroll padding
+                checkScrollPadding()
+
+                // close modal
+                dialog.close()
+            }
         })
     })
 }
