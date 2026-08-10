@@ -46,15 +46,15 @@
     <!-- main -->
     <section class="main lg:h-screen w-full max-w-[1200px] ">
         <!-- main container -->
-        <div class="main-container  w-full flex flex-col md:flex-row md:gap-5 flex-center py-5 overflow-hidden px-5">
+        <div class="main-container w-full flex flex-col md:flex-row md:gap-5 lg:gap-[6rem] flex-center py-5 overflow-hidden px-5">
 
 
             <!-- left section -->
             <section class="left flex justify-center flex-col pb-7">
 
-                <h1 class="font-black text-6xl text-shade tracking-wide text-center md:text-left">ToDo List</h1>
+                <h1 class="font-black text-6xl text-shade tracking-wide text-center">ToDo List</h1>
 
-                <p class="text-2xl text-light py-5 text-center md:text-left ">Lets Accomplish Tasks Together!</p>
+                <p class="text-2xl text-light py-5 text-center ">Lets Accomplish Tasks Together!</p>
 
                 <div class="image w-full">
                     <div class="size-[23rem] ">
@@ -65,14 +65,14 @@
             </section>
 
             <!-- right section -->
-            <section class="right w-full lg:w-[40%]  h-[480px] bg-shade px-4 md:px-7 py-8 rounded-xl">
+            <section class="right w-full lg:max-w-[60%] h-[520px]  sm:h-[480px] bg-shade px-4 sm:px-7 py-8 rounded-xl">
 
                 <h1 class="text-2xl text-center text-light font-bold">Get Things Done !</h1>
 
                 <!-- add task -->
-                <div class="add-task flex mt-6 ">
-                    <input id="add-task-input" type="text" placeholder="What is the task today?" class="bg-transparent placeholder-tint/30   border border-r-0 text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
-                    <button id="addBtn" type="button" class="addBtn bg-tint border border-l-0 border-tint text-sm md:text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
+                <div class="add-task flex flex-col sm:flex-row mt-6 ">
+                    <input id="add-task-input" type="text" placeholder="What is the task today?" class="bg-transparent placeholder-tint/30   border sm:border-r-0 mb-1 sm:mb-[0px] text-tint border-tint pl-4 pr-3 py-1 grow outline-none">
+                    <button id="addBtn" type="button" class="addBtn bg-tint border sm:border-l-0 border-tint text-sm sm:text-[.9rem] px-2 text-nowrap font-medium py-1 text-light  tracking-wide">Add Task</button>
                 </div>
                 <!-- input error -->
                 <p id="input-error" class="hide text-red-600 text-sm mt-1">Please enter content !</p>

@@ -113,6 +113,7 @@ addBtn.addEventListener('click' , () => {
     let inputErrText = document.getElementById('input-error')
     if(addInput.value.trim() === '') {
         inputErrText.classList.remove('hide')
+        inputErrText.classList.add('mb-[-25px]')
         return
     }
     if(addInput.value.trim() !== '') {
@@ -135,7 +136,7 @@ addBtn.addEventListener('click' , () => {
 
 })
 
-// access key
+// access key for add input
 addInput.addEventListener('keydown' , (event) => {
 
     if(event.key === 'Enter'){
@@ -145,6 +146,7 @@ addInput.addEventListener('keydown' , (event) => {
     }
 
 })
+
 // -- add process end --
 
 // -- edit process start --
@@ -170,6 +172,17 @@ function editBtnFunc() {
             // focus on the input
             editBtn.parentElement.parentElement.firstElementChild.focus()
 
+            // access key for item input
+            editBtn.parentElement.parentElement.firstElementChild.addEventListener('keydown' , (event) => {
+
+                if(event.key === 'Enter'){
+
+                    editBtn.parentElement.lastElementChild.click()
+
+                }
+
+            })
+
             // send old text in input to cancelBtnFunc and run that
             cancelBtnFunc(editBtn.parentElement.parentElement.firstElementChild.value)
         })
@@ -186,10 +199,14 @@ function confirmBtnFunc() {
 
             // check input value
             if(confirmBtn.parentElement.parentElement.firstElementChild.value.trim() === '') {
+
+                // show error message
                 confirmBtn.parentElement.parentElement.nextSibling.classList.remove('hide')
                 confirmBtn.parentElement.parentElement.firstElementChild.focus()
+
                 return
             }else{
+                // hide error message
                 confirmBtn.parentElement.parentElement.nextSibling.classList.add('hide')
             }
 
@@ -247,9 +264,16 @@ function cancelBtnFunc(oldTaskText) {
 
             // add disabled to input item
               cancelBtn.parentElement.parentElement.firstElementChild.setAttribute('disabled' , 'disabled')
+
+            // remove error message
+            cancelBtn.parentElement.parentElement.nextElementSibling.classList.add('hide')
         })
     })
 }
+
+
+
+
 
 // -- edit process end --
 
